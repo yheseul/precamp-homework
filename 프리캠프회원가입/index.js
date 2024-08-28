@@ -75,8 +75,8 @@ function studentList(name) {
 
 function detailInformation(detailInformationList, tel, date) {
   const phoneNumber = tel.split("-");
-  const newPhoneNumber = String(tel).replace(phoneNumber[1], "****");
   const detailInformationResult = [];
+  const newPhoneNumber = String(tel).replace(phoneNumber[1], "****");
 
   for (const key in detailInformationList) {
     if (key == "전화번호") detailInformationList[key] = newPhoneNumber;
@@ -140,9 +140,23 @@ function emailValidation() {
   const userEmail = document.getElementById("userEmail");
   const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
   const validation = regex.test(userEmail.value);
+
   if (!validation) {
     document.getElementById("emailValidationBox").style.display = "block";
     return (userEmail.style = "border: 1px solid #E84F4F");
+  }
+  if (validation) {
+    const userDomain = userEmail.value.split("@")[1];
+    const domain = ["naver.com", "gmail.com", "hanmail.net", "kakao.com"];
+    const domainValidation = domain.filter((e) => e == userDomain);
+
+    if (domainValidation.length == 0) {
+      document.getElementById("emailValidationBox").style.display = "block";
+      return (userEmail.style = "border: 1px solid #E84F4F");
+    } else {
+      document.getElementById("emailValidationBox").style.display = "none";
+      return (userEmail.style = "border: 1px solid #c7c7c7");
+    }
   } else {
     document.getElementById("emailValidationBox").style.display = "none";
     return (userEmail.style = "border: 1px solid #c7c7c7");
