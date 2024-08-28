@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>day01</title>
+    <title>pre-camp</title>
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js"></script>
   </head>
@@ -146,24 +146,32 @@
                 <div class="inputBox">
                   <div class="nameTag">이름</div>
                   <input
-                    id="userInformation"
+                    oninput="nameValidation()"
+                    id="userName"
                     class="inputWindow"
                     type="text"
                     placeholder="이름을 입력해 주세요."
                   />
                 </div>
+                <div id="nameValidationBox">이름을 바르게 입력해주세요.</div>
                 <div class="inputBox">
                   <div class="nameTag">이메일</div>
                   <input
-                    id="userInformation"
+                    oninput="emailValidation()"
+                    id="userEmail"
                     class="inputWindow"
                     type="email"
                     placeholder="네이버,구글,한메일,카카오 계정만 입력"
                   />
                 </div>
+                <div id="emailValidationBox">
+                  이메일은 naver.com, gmail.com, hanmail.net, kakao.com 만 사용
+                  가능합니다.
+                </div>
                 <div class="inputBox">
                   <div class="nameTag">비밀번호</div>
                   <input
+                    id="password"
                     class="inputWindow"
                     type="password"
                     placeholder="비밀번호를 입력해 주세요."
@@ -172,19 +180,31 @@
                 <div class="inputBox">
                   <div class="nameTag">비밀번호 확인</div>
                   <input
+                    oninput="passwordValidation()"
+                    id="verifyPassword"
                     class="inputWindow"
                     type="password"
                     placeholder="비밀번호를 한번 더 입력해 주세요."
                   />
                 </div>
+                <div id="passwordValidationBox">
+                  비밀번호와 비밀번호 확인이 일치하지 않습니다.
+                </div>
                 <div class="inputBox">
                   <div class="nameTag">전화번호</div>
                   <input
-                    id="userInformation"
+                    oninput="phoneNumberValidation()"
+                    id="userPhoneNumber"
                     class="inputWindow"
                     type="tel"
                     placeholder="010으로 시작, '-'를 꼭 입력해 주세요."
                   />
+                </div>
+                <div id="phoneNumberValidationBox">
+                  전화번호 입력시 '-'를 입력해주세요 ex&#41; 010-1234-5678
+                </div>
+                <div id="startNumberValidationBox">
+                  전화번호는 010으로 시작해야 합니다.
                 </div>
                 <div class="certificationBox">
                   <div class="requestCertificationNumberBox">
@@ -204,7 +224,7 @@
                 <div class="aboutMeInputBox">
                   <div class="nameTag">자기소개</div>
                   <input
-                    id="userInformation"
+                    id="userIntroduce"
                     class="aboutMeInputWindow"
                     type="text"
                     placeholder="자기소개를 입력해 주세요."

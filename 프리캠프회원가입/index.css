@@ -316,11 +316,67 @@
   font-size: 18px;
   font-weight: 400;
   color: #491449;
+  outline: none;
 }
 .inputWindow::placeholder {
   font-size: 18px;
   font-weight: 400;
   color: #ababab;
+}
+#nameValidationBox {
+  width: 320px;
+  height: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e84f4f;
+  text-align: left;
+  margin-left: 140px;
+  margin-bottom: 10px;
+}
+#emailValidationBox {
+  width: 320px;
+  height: 40px;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e84f4f;
+  text-align: left;
+  margin-left: 140px;
+  margin-bottom: 10px;
+}
+#passwordValidationBox {
+  width: 320px;
+  height: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e84f4f;
+  text-align: left;
+  margin-left: 140px;
+  margin-bottom: 10px;
+}
+#phoneNumberValidationBox {
+  width: 320px;
+  height: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e84f4f;
+  text-align: left;
+  margin-left: 140px;
+  margin-bottom: 10px;
+}
+#startNumberValidationBox {
+  width: 320px;
+  height: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e84f4f;
+  text-align: left;
+  margin-left: 140px;
+  margin-bottom: 10px;
 }
 .certificationBox {
   width: 448px;
