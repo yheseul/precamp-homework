@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>signup</title>
+    <link rel="stylesheet" href="./signup.css" />
+    <script src="./signup.js"></script>
+  </head>
+  <body>
+    <div class="paper">
+      <div class="title">회원 가입을 위해</div>
+      <div class="title">정보를 입력해주세요</div>
+
+      <div class="nameTag">* 이메일</div>
+      <input  id="email" class="inputWindow" type="text" /><br />
+
+      <div class="nameTag">* 이름</div>
+      <input class="inputWindow" type="text" /><br />
+
+      <div class="nameTag">* 비밀번호</div>
+      <input class="inputWindow" type="password" /><br />
+
+      <div class="nameTag">* 비밀번호 확인</div>
+      <input class="inputWindow" type="password" /><br />
+
+      <div class="sex">
+        <input class="check" type="radio" name="성별" id="여성" /><label
+          for="여성"
+          >여성</label
+        >
+        <input class="check" type="radio" name="성별" id="남성" /><label
+          for="남성"
+          >남성</label
+        >
+      </div>
+
+      <div class="conditions">
+        <input type="checkbox" id="agree" /><label for="agree"
+          >이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두
+          동의합니다.</label
+        >
+      </div>
+      <hr />
+
+      <button class="signUpBtn" onclick="signUp()">가입하기</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.paper {
+  width: 670px;
+  height: 960px;
+  border: 1px solid #aacdff;
+  border-radius: 20px;
+  padding: 70px 100px 72px 100px;
+  box-shadow: 7px 7px 39px 0px #0068ff40;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.title {
+  color: #0068ff;
+  font-size: 32px;
+  font-weight: 700;
+}
+.nameTag {
+  color: #797979;
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 20px;
+}
+.inputWindow {
+  width: 466px;
+  font-size: 26px;
+  color: orange;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #cfcfcf;
+  outline: none;
+}
+.inputWindow:focus {
+  border-bottom: 2px solid #0068ff;
+}
+.sex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 5px;
+}
+.check {
+  width: 20px;
+}
+.conditions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+#agree {
+  width: 20px;
+}
+.signUpBtn {
+  width: 470px;
+  height: 75px;
+  border: 1px solid #0068ff;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.signUpBtn:hover {
+  background-color: blue;
+  color: white;
+}
