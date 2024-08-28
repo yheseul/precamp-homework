@@ -464,11 +464,15 @@
   font-size: 18px;
   font-weight: 400;
   color: #491449;
+  outline: none;
 }
 .aboutMeInputWindow::placeholder {
   font-size: 18px;
   font-weight: 400;
   color: #ababab;
+  width: 320px;
+  height: 116px;
+  padding: 8px 12px;
 }
 .checkWrapper {
   width: 448px;
