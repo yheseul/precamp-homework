@@ -204,7 +204,20 @@
 }
 #subscribers {
   width: 328px;
-  height: 100%;
+  max-height: 232px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#subscribers::-webkit-scrollbar {
+  width: 5px;
+}
+#subscribers::-webkit-scrollbar-thumb {
+  height: 30%;
+  background-color: #955c98;
+  border-radius: 10px;
+}
+#subscribers::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1);
 }
 .channelList {
   margin-top: 16px;
