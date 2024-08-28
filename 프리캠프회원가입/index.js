@@ -43,7 +43,7 @@ function showDetailInformation(studentNumber) {
   alert(result);
 }
 
-function studentList() {
+function studentList(name) {
   document.getElementById("noSubscriber").style.display = "none";
   document.getElementById("subscriberList").style.display = "block";
   const subscribers = document.getElementById("subscribers");
@@ -58,7 +58,7 @@ function studentList() {
 
   newLeaner.style = liStyle;
   leanerImg.style = imgStyle;
-  learnerName.innerHTML = `수강생 ${liLength + 1}`;
+  learnerName.innerHTML = name;
   leanerImg.src = "img/프로필 이미지 (export 하세요).png";
 
   newLeaner.append(leanerImg, learnerName);
@@ -84,7 +84,7 @@ function detailInformation(detailInformationList, tel, date) {
   }
 
   detailInformationResult.push(`(가입일시: ${date})`);
-  studentList();
+  studentList(detailInformationList.이름);
   return studentDetailInformation.push(detailInformationResult);
 }
 
@@ -110,7 +110,7 @@ function signUp() {
     이메일: userEmail,
     비밀번호: "****",
     성별: checkedGender,
-    전화번호: usePhoneNumber,
+    전화번호: userPhoneNumber,
     동의여부: checkedAgree,
     자기소개: userIntroduce,
   };
