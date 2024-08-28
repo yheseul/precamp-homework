@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>day01</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="largestBackground">
+        <div class="header">
+          <div class="leftSideHeader">
+            <img src="./img/arrow_left.png" width="32" />
+            <img src="./img/arrow_right.png" width="32" />
+            <img src="./img/time.png" width="32" />
+          </div>
+
+          <div class="headerCenter">
+            <div class="searchBox">
+              <div class="search">
+                <img src="./img/search.png" width="24px" />
+              </div>
+              <input
+                class="searchBar"
+                type="text"
+                placeholder="수강생을 검색해 보세요."
+              />
+            </div>
+            <div class="rightSideHeader">
+              <div class="membershipLevelBadge">
+                <img src="./img/logo_codecamp.png" width="32px" height="32px" />
+                <span class="student">수강생</span>
+              </div>
+              <img src="./img/help.png" width="32px" height="32px" />
+            </div>
+          </div>
+        </div>
+        <div class="sideBarLayout">
+          <div class="sideBar">
+            <div>
+              <div class="homeIcon">
+                <img src="./img/채널 이미지.png" width="40px" />
+              </div>
+              <div class="sideBarIcon">
+                <img src="./img/home.png" width="40px" />
+                <div class="sideBarText">홈</div>
+              </div>
+              <div class="sideBarIcon">
+                <img src="./img/chat.png" width="40px" />
+                <div class="sideBarText">대화</div>
+              </div>
+              <div class="sideBarIcon">
+                <img src="./img/notifications.png" width="40px" />
+                <div class="sideBarText">알림</div>
+              </div>
+              <div class="sideBarIcon">
+                <img src="./img/bookmark.png" width="40px" />
+                <div class="sideBarText">북마크</div>
+              </div>
+              <div class="sideBarIcon">
+                <img src="./img/more_meatball.png" width="40px" />
+                <div class="sideBarText">더 보기</div>
+              </div>
+            </div>
+            <div class="bottomSideMenu">
+              <img class="addIcon" src="./img/add_profile.png" width="40px" />
+              <img src="./img/내 프로필_A.png" width="40px" />
+            </div>
+          </div>
+          <div class="background">
+            <div class="sideMenuLayout">
+              <div class="sideMenu">
+                <div class="channelNameBox">
+                  <div class="channelName">코드캠프</div>
+                  <div>
+                    <img
+                      class="filterIcon"
+                      src="./img/filter.png"
+                      width="24px"
+                    />
+                    <img src="./img/edit.png" width="24px" />
+                  </div>
+                </div>
+                <div class="pledgeDetailView">
+                  <img src="./img/contract_edit.png" width="24px" />
+                  <div class="pledgeDetailVieText">서약서 자세히 보기</div>
+                </div>
+                <div class="border"></div>
+                <div class="notificationArea">
+                  <div class="sideMenuList">
+                    <div class="sideMenuTextBox">
+                      <img src="./img/generation.png" width="24" />
+                      <div class="sideMenuText">코드캠프 13기</div>
+                    </div>
+                    <div class="inCourse">수강중</div>
+                  </div>
+                  <div class="sideMenuList">
+                    <div class="sideMenuTextBox">
+                      <img src="./img/group.png" width="24" />
+                      <div class="sideMenuText">수강생 리스트</div>
+                    </div>
+                    <img src="./img/arrow_down.png" width="24" />
+                  </div>
+                  <div id="subscriberList">
+                    <ul id="subscribers"></ul>
+                  </div>
+                  <div id="noSubscriber">
+                    <div class="noSubscriberText">
+                      <div>현재 가입한 멤버가 없어요.</div>
+                      <div>회원가입 해보세요.</div>
+                    </div>
+                    <div class="signBtn">
+                      <img src="./img/person_add.png" width="24px" />
+                      <div class="signBtnText">가입하기</div>
+                    </div>
+                  </div>
+                  <div class="sideMenuList">
+                    <div class="sideMenuTextBox">
+                      <img src="./img/channel_list.png" width="24" />
+                      <div class="sideMenuText">채널</div>
+                    </div>
+                    <img src="./img/arrow_down.png" width="24" />
+                  </div>
+                  <div class="channelList">
+                    <div class="channel"># 채널1</div>
+                    <div class="channel"># 채널2</div>
+                    <div class="channel"># 채널3</div>
+                    <div class="channel"># 채널4</div>
+                  </div>
+                  <div class="sideMenuList">
+                    <div class="sideMenuTextBox">
+                      <img src="./img/skull.png" width="24" />
+                      <div class="sideMenuText">차단 멤버 리스트</div>
+                    </div>
+                    <img src="./img/arrow_down.png" width="24" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="signUpBox">
+              <div class="signUpTitle">
+                <div>코드캠프에 가입하고</div>
+                <div>개발자로 커리어 점프 하세요.</div>
+              </div>
+              <div class="registrationInformation">
+                <div class="inputBox">
+                  <div class="nameTag">이름</div>
+                  <input
+                    id="userInformation"
+                    class="inputWindow"
+                    type="text"
+                    placeholder="이름을 입력해 주세요."
+                  />
+                </div>
+                <div class="inputBox">
+                  <div class="nameTag">이메일</div>
+                  <input
+                    id="userInformation"
+                    class="inputWindow"
+                    type="email"
+                    placeholder="네이버,구글,한메일,카카오 계정만 입력"
+                  />
+                </div>
+                <div class="inputBox">
+                  <div class="nameTag">비밀번호</div>
+                  <input
+                    class="inputWindow"
+                    type="password"
+                    placeholder="비밀번호를 입력해 주세요."
+                  />
+                </div>
+                <div class="inputBox">
+                  <div class="nameTag">비밀번호 확인</div>
+                  <input
+                    class="inputWindow"
+                    type="password"
+                    placeholder="비밀번호를 한번 더 입력해 주세요."
+                  />
+                </div>
+                <div class="inputBox">
+                  <div class="nameTag">전화번호</div>
+                  <input
+                    id="userInformation"
+                    class="inputWindow"
+                    type="tel"
+                    placeholder="010으로 시작, '-'를 꼭 입력해 주세요."
+                  />
+                </div>
+                <div class="certificationBox">
+                  <div class="requestCertificationNumberBox">
+                    <div id="certificationNumber">000000</div>
+                    <button
+                      id="requestCertificationNumber"
+                      onclick="requestVerificationNumber()"
+                    >
+                      인증번호 요청
+                    </button>
+                  </div>
+                  <div class="certificationWrapper">
+                    <div id="verificationTime"></div>
+                    <button class="certification">인증하기</button>
+                  </div>
+                </div>
+                <div class="aboutMeInputBox">
+                  <div class="nameTag">자기소개</div>
+                  <input
+                    id="userInformation"
+                    class="aboutMeInputWindow"
+                    type="text"
+                    placeholder="자기소개를 입력해 주세요."
+                  />
+                </div>
+                <div class="checkWrapper">
+                  <div class="checkTitle">성별</div>
+                  <div class="checks">
+                    <div class="checkbox">
+                      <input
+                        class="check"
+                        type="radio"
+                        name="성별"
+                        id="여성"
+                      /><label class="checkText" for="여성">여성</label>
+                    </div>
+                    <div class="checkbox">
+                      <input
+                        class="check"
+                        type="radio"
+                        name="성별"
+                        id="남성"
+                      /><label class="checkText" for="남성">남성</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="agreeBox">
+                  <div class="conditions">
+                    <input type="checkbox" id="agree" /><label
+                      class="agreeText"
+                      for="agree"
+                      >집에는 씻으러만 가는데 동의합니다.</label
+                    >
+                  </div>
+                  <button class="signUpBtn" onclick="signUp()">가입</button>
+                </div>
+              </div>
+            </div>
+            <img src="./img/mainimg.png" width="680px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

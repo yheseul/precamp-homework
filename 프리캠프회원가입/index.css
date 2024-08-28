@@ -1,0 +1,490 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.layout {
+  width: 1920px;
+  height: 1208px;
+}
+.largestBackground {
+  background-image: url("./img/BG1.png");
+  background-size: contain;
+  width: 1920px;
+  height: 1208px;
+}
+.header {
+  width: 1920px;
+  height: 80px;
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 320px;
+}
+.leftSideHeader {
+  display: flex;
+  justify-content: end;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  gap: 16px;
+}
+.headerCenter {
+  width: 1360px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
+}
+.searchBox {
+  width: 920px;
+  height: 48px;
+  background-color: #955c98;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+}
+.search {
+  width: 48px;
+  height: 48px;
+  margin: 12px 0px 12px 16px;
+}
+.searchBar {
+  border: none;
+  background-color: #955c98;
+  width: 800px;
+  font-size: 20px;
+  color: #efe6ef;
+  font-weight: 400;
+}
+.searchBar::placeholder {
+  color: #efe6ef;
+  font-weight: 400;
+  font-size: 20px;
+}
+.searchBar:focus {
+  outline: none;
+}
+.rightSideHeader {
+  width: 163px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.membershipLevelBadge {
+  width: 120px;
+  height: 48px;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+}
+.student {
+  margin-left: 2px;
+}
+.sideBarLayout {
+  display: flex;
+}
+.sideBar {
+  width: 80px;
+  height: 1038px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 20px 0px 20px;
+}
+.homeIcon {
+  width: 40px;
+  height: 64px;
+}
+.sideBarIcon {
+  width: 40px;
+  height: 64px;
+  margin-bottom: 30px;
+}
+.sideBarText {
+  color: #e4e4e4;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 4px;
+}
+.bottomSideMenu {
+  width: 40px;
+  height: 96px;
+}
+.addIcon {
+  margin-bottom: 16px;
+}
+.background {
+  background-image: url("./img/BG2.png");
+  background-size: contain;
+  width: 1760px;
+  height: 1048px;
+  border-radius: 8px;
+  display: flex;
+}
+.sideMenuLayout {
+  width: 400px;
+  height: 1048px;
+  padding: 20px;
+}
+.sideMenu {
+  width: 360px;
+  height: 632px;
+  /* height: 760px; */
+}
+.channelNameBox {
+  width: 360px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.channelName {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.filterIcon {
+  margin-right: 8px;
+}
+.pledgeDetailView {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.pledgeDetailVieText {
+  color: #491449;
+  font-weight: 600px;
+  font-size: 20px;
+  margin-left: 8px;
+}
+.border {
+  border-width: 0 0 1px;
+  border-color: #955c98;
+  border-style: solid;
+}
+.notificationArea {
+  width: 360px;
+  height: 488px;
+}
+.sideMenuList {
+  width: 360px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0 4px 0;
+  margin-top: 24px;
+}
+.sideMenuTextBox {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+}
+.sideMenuText {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+#subscriberList {
+  width: 360px;
+  padding: 0 16px;
+  margin-top: 12px;
+  display: none;
+}
+#subscribers {
+  width: 328px;
+  height: 100%;
+}
+.channelList {
+  margin-top: 16px;
+  margin-bottom: -10px;
+  width: 360px;
+  height: 150px;
+}
+.channel {
+  width: 360px;
+  height: 32px;
+  padding: 4px 16px;
+  color: #d4d3d3;
+  font-size: 18px;
+  font-weight: 500px;
+  margin-bottom: 8px;
+}
+#noSubscriber {
+  margin-top: 12px;
+  width: 360px;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.noSubscriberText {
+  width: 360px;
+  height: 56px;
+  padding: 8px;
+  text-align: center;
+  color: #c9aac9;
+  font-size: 14px;
+  font-weight: 400;
+}
+.signBtn {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: #491449;
+  width: 126px;
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.signBtnText {
+  margin-left: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.inCourse {
+  width: 66px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 700px;
+  background-color: #ffffff33;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.signUpBox {
+  width: 680px;
+  height: 1360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUpTitle {
+  width: 560px;
+  height: 112px;
+  color: #491449;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 56px;
+  text-align: center;
+  margin: 40px 60px;
+}
+.registrationInformation {
+  width: 560px;
+  height: 724px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputBox {
+  width: 448px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.nameTag {
+  width: 120px;
+  height: 44px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+}
+.inputWindow {
+  width: 320px;
+  height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #491449;
+}
+.inputWindow::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ababab;
+}
+.certificationBox {
+  width: 448px;
+  height: 92px;
+  margin-bottom: 12px;
+}
+.requestCertificationNumberBox {
+  width: 448px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 12px;
+}
+#certificationNumber {
+  color: #955c98;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+#requestCertificationNumber {
+  background-color: #ffffff;
+  width: 144px;
+  height: 40px;
+  border: 1px solid #491449;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #491449;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.certificationWrapper {
+  display: flex;
+  justify-content: end;
+}
+#verificationTime {
+  width: 50px;
+  height: 24px;
+  color: #e84f4f;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 8px 12px;
+}
+.certification {
+  background-color: #c7c7c7;
+  border: none;
+  width: 144px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #f2f2f2;
+  float: right;
+}
+.aboutMeInputBox {
+  width: 448px;
+  height: 116px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.aboutMeInputWindow {
+  width: 320px;
+  height: 116px;
+  padding: 8px 12px;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #491449;
+}
+.aboutMeInputWindow::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ababab;
+}
+.checkWrapper {
+  width: 448px;
+  height: 44px;
+  display: flex;
+  margin-top: 20px;
+}
+.checkTitle {
+  width: 120px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+}
+.checks {
+  width: 168px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  width: 64px;
+  height: 24px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.check {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: max(2.5px, 0.1em) solid #919191;
+  border-radius: 50%;
+}
+.check:checked {
+  border: 0.5em solid #491449;
+}
+.checkText {
+  width: 32px;
+  height: 24px;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+.agreeBox {
+  margin-top: 16px;
+  width: 560px;
+  height: 92px;
+  padding: 0 56px;
+}
+.conditions {
+  width: 448px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+}
+#agree {
+  width: 24px;
+  height: 24px;
+  appearance: none;
+  border: max(2.5px, 0.1em) solid #919191;
+}
+#agree:checked {
+  border: 0.5em solid #491449;
+}
+.agreeText {
+  width: 300px;
+  height: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin-left: 8px;
+}
+.signUpBtn {
+  width: 448px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #c7c7c7;
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
