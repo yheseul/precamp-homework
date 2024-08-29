@@ -4,10 +4,13 @@ let isEmail = false;
 let isGender = false;
 let isAboutMe = false;
 let isPassword = false;
+let isAuthenticate = false;
 let studentDetailInformation = [];
 
 function inputValidation() {
-  document.getElementById('userIntroduce').value ? isAboutMe = true : isAboutMe = false;
+  document.getElementById("userIntroduce").value
+    ? (isAboutMe = true)
+    : (isAboutMe = false);
 
   const tel = isTel;
   const name = isName;
@@ -15,22 +18,16 @@ function inputValidation() {
   const gender = isGender;
   const aboutMe = isAboutMe;
   const password = isPassword;
+  const authenticate = isAuthenticate;
 
-  if(
-    tel &&
-    name &&
-    email &&
-    gender &&
-    aboutMe &&
-    password
-  ){
-    const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+  if (tel && name && email && gender && aboutMe && password && authenticate) {
+    const signUpBtn = document.getElementsByClassName("signUpBtn")[0];
     signUpBtn.disabled = false;
-    signUpBtn.style = "background-color: #491449;"
-  }else{
-    const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+    signUpBtn.style = "background-color: #491449;";
+  } else {
+    const signUpBtn = document.getElementsByClassName("signUpBtn")[0];
     signUpBtn.disabled = true;
-    signUpBtn.style = "background-color: #c7c7c7;"
+    signUpBtn.style = "background-color: #c7c7c7;";
   }
 }
 
@@ -38,6 +35,11 @@ function certifiedValidityTime(verificationNumber) {
   let timer;
   let time = 179;
   timer = setInterval(() => {
+    const certificationBtn =
+      document.getElementsByClassName("certification")[0];
+    certificationBtn.disabled = false;
+    certificationBtn.style = "background-color: #491449;";
+
     const requestCertificationNumber = document.getElementById(
       "requestCertificationNumber"
     );
@@ -52,7 +54,7 @@ function certifiedValidityTime(verificationNumber) {
     const sec = String(time % 60).padStart(2, 0);
     verificationTime.innerText = `${min}:${sec}`;
     time -= 1;
-    
+
     if (sec == "-1") {
       clearInterval(timer);
       verificationTime.style.display = "none";
@@ -123,15 +125,16 @@ function detailInformation(detailInformationList, tel, date) {
 }
 
 function signUp() {
-  isTel = false
-  isName = false
-  isEmail = false
-  isGender = false
-  isAboutMe = false
-  isPassword = false
-  const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+  isTel = false;
+  isName = false;
+  isEmail = false;
+  isGender = false;
+  isAboutMe = false;
+  isPassword = false;
+  isAuthenticate = false;
+  const signUpBtn = document.getElementsByClassName("signUpBtn")[0];
   signUpBtn.disabled = true;
-  signUpBtn.style = "background-color: #c7c7c7;"
+  signUpBtn.style = "background-color: #c7c7c7;";
 
   const date = new Date();
   const year = date.getFullYear();
@@ -249,13 +252,17 @@ function phoneNumberValidation() {
 }
 
 function genderValidation() {
-  const checkedMale = document.getElementById('남성').checked;
-  const checkedFemale = document.getElementById('여성').checked;
-  const validationGender = checkedFemale == true || checkedMale == true
+  const checkedMale = document.getElementById("남성").checked;
+  const checkedFemale = document.getElementById("여성").checked;
+  const validationGender = checkedFemale == true || checkedMale == true;
 
-  if(validationGender == true){
+  if (validationGender == true) {
     isGender = true;
-  }else{
+  } else {
     isGender = false;
   }
+}
+
+function authenticate() {
+  return isAuthenticate = true;
 }
