@@ -66,7 +66,7 @@ function certifiedValidityTime(verificationNumber) {
     verificationTime.innerText = `${min}:${sec}`;
     time -= 1;
 
-    if (sec == "-1") {
+    if (sec == "-1" || isAuthenticate) {
       clearInterval(timer);
       verificationTime.style.display = "none";
       requestCertificationNumber.disabled = false;
@@ -161,6 +161,7 @@ function signUp() {
   const genderList = document.querySelectorAll(
     '.checkWrapper input[type="radio"]:checked'
   );
+  const certificationBtn = document.getElementsByClassName("certification")[0];
   const checkedGender = genderList[0].id;
 
   const detailInformationList = {
@@ -177,6 +178,9 @@ function signUp() {
     회원가입을 축하합니다.
     (가입일시 : ${registrationDate})
   `);
+
+  certificationBtn.disabled = false;
+  certificationBtn.style = "background-color: #491449";
 
   detailInformation(detailInformationList, userPhoneNumber, registrationDate);
 }
@@ -275,6 +279,10 @@ function genderValidation() {
 }
 
 function authenticate() {
+  const certificationBtn = document.getElementsByClassName("certification")[0];
+
+  certificationBtn.disabled = true;
+  certificationBtn.style = "background-color: #C7C7C7";
   return (isAuthenticate = true);
 }
 
