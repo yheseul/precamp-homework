@@ -465,6 +465,8 @@
   font-weight: 400;
   color: #491449;
   outline: none;
+  overflow: hidden;
+  resize: none;
 }
 .aboutMeInputWindow::placeholder {
   font-size: 18px;
