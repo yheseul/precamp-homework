@@ -218,7 +218,13 @@
                   </div>
                   <div class="certificationWrapper">
                     <div id="verificationTime"></div>
-                    <button class="certification" disabled onclick="authenticate(); inputValidation()">인증하기</button>
+                    <button
+                      class="certification"
+                      disabled
+                      onclick="authenticate(); inputValidation()"
+                    >
+                      인증하기
+                    </button>
                   </div>
                 </div>
                 <div class="aboutMeInputBox">
@@ -256,13 +262,17 @@
                 </div>
                 <div class="agreeBox">
                   <div class="conditions">
-                    <input type="checkbox" id="agree" /><label
-                      class="agreeText"
-                      for="agree"
+                    <input
+                      oninput="agree(); inputValidation()"
+                      type="checkbox"
+                      id="agree"
+                    /><label class="agreeText" for="agree"
                       >집에는 씻으러만 가는데 동의합니다.</label
                     >
                   </div>
-                  <button class="signUpBtn" onclick="signUp()" disabled>가입</button>
+                  <button class="signUpBtn" onclick="signUp()" disabled>
+                    가입
+                  </button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 let isTel = false;
 let isName = false;
 let isEmail = false;
+let isAgree = false;
 let isGender = false;
 let isAboutMe = false;
 let isPassword = false;
@@ -14,13 +15,23 @@ function inputValidation() {
 
   const tel = isTel;
   const name = isName;
+  const agree = isAgree;
   const email = isEmail;
   const gender = isGender;
   const aboutMe = isAboutMe;
   const password = isPassword;
   const authenticate = isAuthenticate;
 
-  if (tel && name && email && gender && aboutMe && password && authenticate) {
+  if (
+    tel &&
+    name &&
+    agree &&
+    email &&
+    gender &&
+    aboutMe &&
+    password &&
+    authenticate
+  ) {
     const signUpBtn = document.getElementsByClassName("signUpBtn")[0];
     signUpBtn.disabled = false;
     signUpBtn.style = "background-color: #491449;";
@@ -264,5 +275,10 @@ function genderValidation() {
 }
 
 function authenticate() {
-  return isAuthenticate = true;
+  return (isAuthenticate = true);
+}
+
+function agree() {
+  const checkedAgree = document.getElementById("agree").checked;
+  return checkedAgree ? (isAgree = true) : isAgree != false;
 }
