@@ -146,7 +146,7 @@
                 <div class="inputBox">
                   <div class="nameTag">이름</div>
                   <input
-                    oninput="nameValidation()"
+                    oninput="nameValidation(); inputValidation()"
                     id="userName"
                     class="inputWindow"
                     type="text"
@@ -157,7 +157,7 @@
                 <div class="inputBox">
                   <div class="nameTag">이메일</div>
                   <input
-                    oninput="emailValidation()"
+                    oninput="emailValidation(); inputValidation()"
                     id="userEmail"
                     class="inputWindow"
                     type="email"
@@ -180,7 +180,7 @@
                 <div class="inputBox">
                   <div class="nameTag">비밀번호 확인</div>
                   <input
-                    oninput="passwordValidation()"
+                    oninput="passwordValidation(); inputValidation()"
                     id="verifyPassword"
                     class="inputWindow"
                     type="password"
@@ -193,7 +193,7 @@
                 <div class="inputBox">
                   <div class="nameTag">전화번호</div>
                   <input
-                    oninput="phoneNumberValidation()"
+                    oninput="phoneNumberValidation(); inputValidation()"
                     id="userPhoneNumber"
                     class="inputWindow"
                     type="tel"
@@ -224,6 +224,7 @@
                 <div class="aboutMeInputBox">
                   <div class="nameTag">자기소개</div>
                   <textarea
+                    oninput="inputValidation()"
                     id="userIntroduce"
                     class="aboutMeInputWindow"
                     type="text"
@@ -235,6 +236,7 @@
                   <div class="checks">
                     <div class="checkbox">
                       <input
+                        oninput="genderValidation(); inputValidation()"
                         class="check"
                         type="radio"
                         name="성별"
@@ -243,6 +245,7 @@
                     </div>
                     <div class="checkbox">
                       <input
+                        oninput="genderValidation(); inputValidation()"
                         class="check"
                         type="radio"
                         name="성별"
@@ -259,7 +262,7 @@
                       >집에는 씻으러만 가는데 동의합니다.</label
                     >
                   </div>
-                  <button class="signUpBtn" onclick="signUp()">가입</button>
+                  <button class="signUpBtn" onclick="signUp()" disabled>가입</button>
                 </div>
               </div>
             </div>

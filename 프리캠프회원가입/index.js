@@ -1,4 +1,38 @@
+let isTel = false;
+let isName = false;
+let isEmail = false;
+let isGender = false;
+let isAboutMe = false;
+let isPassword = false;
 let studentDetailInformation = [];
+
+function inputValidation() {
+  document.getElementById('userIntroduce').value ? isAboutMe = true : isAboutMe = false;
+
+  const tel = isTel;
+  const name = isName;
+  const email = isEmail;
+  const gender = isGender;
+  const aboutMe = isAboutMe;
+  const password = isPassword;
+
+  if(
+    tel &&
+    name &&
+    email &&
+    gender &&
+    aboutMe &&
+    password
+  ){
+    const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+    signUpBtn.disabled = false;
+    signUpBtn.style = "background-color: #491449;"
+  }else{
+    const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+    signUpBtn.disabled = true;
+    signUpBtn.style = "background-color: #c7c7c7;"
+  }
+}
 
 function certifiedValidityTime(verificationNumber) {
   let timer;
@@ -18,7 +52,7 @@ function certifiedValidityTime(verificationNumber) {
     const sec = String(time % 60).padStart(2, 0);
     verificationTime.innerText = `${min}:${sec}`;
     time -= 1;
-
+    
     if (sec == "-1") {
       clearInterval(timer);
       verificationTime.style.display = "none";
@@ -66,7 +100,7 @@ function studentList(name) {
     showDetailInformation(liLength + 1);
   });
   subscribers.appendChild(newLeaner);
-  const resetInput = document.querySelectorAll("input");
+  const resetInput = document.querySelectorAll("input, textarea");
   resetInput.forEach((input) => {
     input.value = "";
     input.checked = false;
@@ -89,6 +123,16 @@ function detailInformation(detailInformationList, tel, date) {
 }
 
 function signUp() {
+  isTel = false
+  isName = false
+  isEmail = false
+  isGender = false
+  isAboutMe = false
+  isPassword = false
+  const signUpBtn = document.getElementsByClassName('signUpBtn')[0]
+  signUpBtn.disabled = true;
+  signUpBtn.style = "background-color: #c7c7c7;"
+
   const date = new Date();
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, 0);
@@ -132,6 +176,7 @@ function nameValidation() {
     return (userName.style = "border: 1px solid #E84F4F");
   } else {
     document.getElementById("nameValidationBox").style.display = "none";
+    isName = true;
     return (userName.style = "border: 1px solid #c7c7c7");
   }
 }
@@ -155,10 +200,12 @@ function emailValidation() {
       return (userEmail.style = "border: 1px solid #E84F4F");
     } else {
       document.getElementById("emailValidationBox").style.display = "none";
+      isEmail = true;
       return (userEmail.style = "border: 1px solid #c7c7c7");
     }
   } else {
     document.getElementById("emailValidationBox").style.display = "none";
+    isEmail = true;
     return (userEmail.style = "border: 1px solid #c7c7c7");
   }
 }
@@ -171,6 +218,7 @@ function passwordValidation() {
     return (verifyPassword.style = "border: 1px solid #E84F4F");
   } else {
     document.getElementById("passwordValidationBox").style.display = "none";
+    isPassword = true;
     return (verifyPassword.style = "border: 1px solid #c7c7c7");
   }
 }
@@ -185,6 +233,7 @@ function phoneNumberValidation() {
   if (!startNumberValidation && validation) {
     document.getElementById("phoneNumberValidationBox").style.display = "none";
     document.getElementById("startNumberValidationBox").style.display = "none";
+    isTel = true;
     return (userPhoneNumber.style = "border: 1px solid #c7c7c7");
   }
   if (!startNumberValidation && !validation) {
@@ -196,5 +245,17 @@ function phoneNumberValidation() {
     document.getElementById("startNumberValidationBox").style.display = "block";
     document.getElementById("phoneNumberValidationBox").style.display = "none";
     return (userPhoneNumber.style = "border: solid 1px #E84F4F");
+  }
+}
+
+function genderValidation() {
+  const checkedMale = document.getElementById('남성').checked;
+  const checkedFemale = document.getElementById('여성').checked;
+  const validationGender = checkedFemale == true || checkedMale == true
+
+  if(validationGender == true){
+    isGender = true;
+  }else{
+    isGender = false;
   }
 }
